@@ -1,7 +1,7 @@
 #BUILD
 FROM docker.io/maven:adoptopenjdk as build
 
-WORDIR /home/lab
+WORKDIR /home/lab
 
 COPY pom.xml
 RUN mvn verify -DskipYests --fail-never
