@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+
+  db:
+    build: db
+    image: chachou/cloud-native-db
+    
+  words:
+    build: words
+    image: chachou/cloud-native-api
+    deploy:
+      replicas: 5
+      
+  web:
+    build: web
+    image: chachou/cloud-native-web
+    ports:
+      "8080:80"
