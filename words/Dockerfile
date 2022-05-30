@@ -16,4 +16,4 @@ ENTRYPOINT ["java", "-Xmx8m", "-Xms8m", "jar", "/app/words.jar"]
 EXPOSE 8082
 
 WORKDIR /app
-COPY --from-build /home/lab/target .
+COPY --from=build /home/lab/target .
