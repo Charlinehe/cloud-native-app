@@ -3,7 +3,7 @@ FROM docker.io/maven:adoptopenjdk as build
 
 WORKDIR /home/lab
 
-COPY pom.xml
+COPY pom.xml .
 RUN mvn verify -DskipYests --fail-never
 
 COPY src ./src
