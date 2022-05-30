@@ -9,6 +9,6 @@ RUN go build dispatcher.go
 FROM alpine
 
 COPY static ./static
-COPY dispatcher .
+COPY ./dispatcher .
 
-RUN ./dispatcher
+RUN dispatcher
