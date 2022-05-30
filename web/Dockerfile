@@ -7,3 +7,8 @@ RUN go build dispatcher.go
 
 #RUN
 FROM alpine
+
+COPY static ./static
+COPY dispatcher .
+
+RUN ./dispatcher
